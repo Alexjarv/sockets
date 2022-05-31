@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.App {
+    text-align: center;
+    height: 100vh;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.m-auto {
+    margin: auto auto;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+.chat-login {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.chat-container {
+    max-height: 360px;
+}
+
+.chat-body {
+    padding: 7px 10px;
+    min-height: 24rem;
+    max-height: 24rem;
+    overflow-y: scroll;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .8rem;
+}
+
+.message-info {
+    display: flex;
+    align-items: center;
+}
+
+.message-info>p {
+    padding-right: 7px;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(61, 61, 61);
+}
+
+.message-system {
+    align-items: center;
+}
+
+.message-system>.message {
+    background: transparent;
+    color: rgb(61, 61, 61);
+    border: none;
+    box-shadow: none;
+}
+
+#your {
+    align-items: flex-end;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
