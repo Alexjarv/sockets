@@ -42,7 +42,7 @@ function Chat({socket, username, room}) {
                                         <p>{messageContent.message}</p>
                                     </div>
                                     <div className='message-info'>
-                                        <p>{messageContent.time}</p>
+                                        <p className='message-time'>{messageContent.time}</p>
                                         { messageContent.author !== 'system' && <p>{messageContent.author}</p> }
                                     </div>
                                 </div>

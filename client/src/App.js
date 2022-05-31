@@ -5,18 +5,18 @@ import { useState } from 'react';
 import { Button, Input, FormLabel, FormControl, FormHelperText } from "@vechaiui/react";
 
 
-const socket = io.connect('http://localhost:3001');
+const socket = io.connect('http://192.168.1.156:3001');
 
 function App() {
   
   const [username, setUsername] = useState('');
-  const [room, setRoom] = useState('');
+  const [room] = useState('1');
   const [showChat, setShowChat] = useState(false);
 
   function joinRoom(){
-    if(username !== "" && room !== ""){
+    if(username !== ""){
       const data = {
-          room : room,
+          room : '1',
           username : username
       };
       socket.emit("join_room", data);
@@ -42,14 +42,16 @@ function App() {
                   <Input type="text" placeholder="Alex..." onChange={(event) => { setUsername(event.target.value) }} />
                   <FormHelperText>Keep it simple.</FormHelperText>
               </FormControl>
-    
-              <FormControl id="room">
+
+              
+              {/* <FormControl id="room">
                   <FormLabel>
                     Chat ID
                   </FormLabel>
                   <Input type="text" placeholder="Chat ID..." onChange={(event) => { setRoom(event.target.value) }} />
                   <FormHelperText>Chat ID is numbers and characters.</FormHelperText>
-              </FormControl>
+              </FormControl> */}
+              
               <Button onClick={joinRoom} type="submit" variant="solid" color="primary" className='m-2'>Join</Button>
             </div>
           :

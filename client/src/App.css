@@ -54,22 +54,39 @@
     padding-right: 7px;
     font-size: 14px;
     text-align: center;
-    color: rgb(61, 61, 61);
+}
+
+.message-time {
+    color: rgb(129, 129, 129);
 }
 
 .message-system {
-    align-items: center;
+    align-items: center !important;
 }
 
 .message-system>.message {
-    background: transparent;
-    color: rgb(61, 61, 61);
-    border: none;
-    box-shadow: none;
+    background: transparent !important;
+    ;
+    color: rgb(61, 61, 61) !important;
+    ;
+    border: none !important;
+    ;
+    box-shadow: none !important;
+    ;
+    margin: 0 !important;
+    ;
 }
 
-#your {
+#other {
     align-items: flex-end;
+}
+
+#your>.message {
+    background: rgb(80, 189, 80);
+}
+
+#other>.message {
+    background: rgb(74, 129, 165);
 }
 
 @media (prefers-reduced-motion: no-preference) {
